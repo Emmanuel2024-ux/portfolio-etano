@@ -384,7 +384,7 @@ ul, ol {
 .navbar {
   padding: var(--space-sm) 0;
   transition: var(--transition-normal);
-  background: transparent !important;
+  background: transparent;
   position: fixed;
   top: 0;
   left: 0;
@@ -472,6 +472,15 @@ ul, ol {
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 80%;
+}
+
+/* Background vert quand le menu mobile est ouvert */
+@media (max-width: 991.98px) {
+  .navbar-collapse.show {
+    background: var(--gradient-primary); /* ton vert */
+    padding: var(--space-md);
+    border-radius: 0 0 10px 10px;
+  }
 }
 
 /* ==== 7. HERO SECTION === */
@@ -1312,6 +1321,13 @@ ul, ol {
   margin-bottom: var(--space-lg);
 }
 
+.phone-link {
+  transition: 0.3s ease;
+}
+
+.phone-link:hover {
+  color: var(--color-primary);
+}
 .contact-icon {
   width: 45px;
   height: 45px;
